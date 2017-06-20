@@ -98,6 +98,19 @@ public class Scroll extends BaseTest {
         int duration = Math.abs(endY - startY) * 3;
         driver.swipe(startX,startY,startX,endY,duration);
     }
+
+    public void scrollHalfScreenUpOrDownNOContentView(SwipeElementDirection direction){
+        int startX = driver.manage().window().getSize().getWidth()/2;
+        int startY = driver.manage().window().getSize().getHeight()/2;
+        int endY ;
+        if(direction == SwipeElementDirection.DOWN){
+            endY = driver.manage().window().getSize().getHeight()-1;
+        }else {
+            endY = 1;
+        }
+        int duration = Math.abs(endY - startY) * 3;
+        driver.swipe(startX,startY,startX,endY,duration);
+    }
 }
 
 

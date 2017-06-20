@@ -21,6 +21,9 @@ public class Tests extends BaseTest{
         driver.findElementById("edittext_last_name").sendKeys("Carroll");
        // new Scroll().scrollToElement((MobileElement) driver.findElementByClassName("LinearLayout"), (MobileElement) driver.findElementById("edittext_address_line_1"), SwipeElementDirection.DOWN, 30);
         driver.findElementById("edittext_address_line_1").sendKeys("123 Fake Street");
+
+        new Scroll().scrollHalfScreenUpOrDownNOContentView(SwipeElementDirection.UP);
+
         driver.findElementById("edittext_address_city").sendKeys("Palo Alto");
         driver.findElementById("edittext_address_state").sendKeys("CA");
         driver.findElementById("edittext_address_zip").sendKeys("94024");
